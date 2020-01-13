@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
 import { connect } from "react-redux";
-import { AgeFunction } from "./general/variables";
+import { AgeFunction, AgeAsync } from "./general/variables";
 
 const up = AgeFunction.up;
 const down = AgeFunction.down;
+const upAsync = AgeAsync.up;
+const downAsync = AgeAsync.down;
 
 class App extends Component {
   render() {

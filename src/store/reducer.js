@@ -1,4 +1,4 @@
-import { AgeFunction } from "../general/variables";
+import { AgeFunction, AgeAsync } from "../general/variables";
 
 const initialState = {
   age: 20
@@ -7,11 +7,14 @@ const initialState = {
 const up = AgeFunction.up;
 const down = AgeFunction.down;
 
+const upAsync = AgeAsync.up;
+const downAsync = AgeAsync.down;
+
 const reducer = (state = initialState, action) => {
   const newState = { ...state };
 
   switch (action.type) {
-    case up:
+    case upAsync:
       newState.age += action.value;
       break;
 
